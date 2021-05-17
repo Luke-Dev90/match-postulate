@@ -1,0 +1,15 @@
+<div class="container">
+    <table class="table table-striped table-bordered border-primary rounded-bottom">
+        <thead>
+            <tr>
+                <th>nombre</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="habilitar">
+            <tr *ngFor='let curso of cursos' >
+                <td >{{curso}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary my-3" (click)="setHabilitar()">{{habilitar==true?'Ocultar':'Mostrar'}}</button>
+</div>

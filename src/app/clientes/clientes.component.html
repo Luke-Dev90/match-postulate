@@ -1,0 +1,44 @@
+
+<div class="container-fluid" style="background-color: rgb(237,255,255);">
+    <div class="row equal">
+        <div class="col-sm d-flex pb-3 align-self-center" *ngFor="let cliente of clientes" >
+            <div class="container card" style="width: 18rem;">
+                <div class="card-header bg-light text-white align-self-center">
+                    <img class="img-thumbnail " src={{urlAsset}}{{cliente.foto}}>
+                </div>
+                <div class="card-body">
+                    <h5>{{cliente.apellido}} {{cliente.nombre}}</h5>
+                    <hr>
+                    <ul>
+                        <li>{{cliente.email}}</li>
+                        <li>{{cliente.provincia}}</li>
+                        <li>{{cliente.localidad}}</li>
+
+                    </ul>
+                    
+                    <hr>
+                    <h6>Idioma:</h6>
+                    <select class="form-select form-select.lg mb-3" aria-label=".form-select-lg example">
+                        <option *ngFor="let idio of cliente.idioma">{{idio}}</option>
+                    </select>
+                    <hr>
+                    <h6>Skills:</h6>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option *ngFor="let skill of cliente.skills" >{{skill}}</option>
+                      </select>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-5">
+                                  <button class="btn btn-primary">Match</button>
+                              </div>
+                              <div class="col-5">
+                                  <button class="btn btn-success">Add</button>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
